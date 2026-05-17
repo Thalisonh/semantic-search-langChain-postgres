@@ -1,10 +1,15 @@
+import os
 from search import search_prompt
 
 def main():
-    chain = search_prompt()
+    try:
+        question = input("Faça sua pergunta: ")
+        response = search_prompt(question)
 
-    if not chain:
-        print("Não foi possível iniciar o chat. Verifique os erros de inicialização.")
+        print(f"\nRESPOSTA: {response}")
+
+    except Exception as e:
+        print(f"Erro ao buscar: {e}")
         return
     
     pass
