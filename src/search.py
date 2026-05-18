@@ -61,7 +61,7 @@ def search_prompt(question=None):
     prompt_preenchido = PROMPT_TEMPLATE.format(contexto=contexto_str, pergunta=question)
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-3.1-flash-lite",
+        model="gemini-2.5-flash",
         google_api_key=os.getenv("GEMINI_API_KEY")
     )
 
